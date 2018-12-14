@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    
+    
+    <!-- Hotjar Tracking Code for www.hightidestudio.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1129304,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>   
+    
+    
+    <style>
+      .noPadding{
+        padding: 0 !important;
+      }
+      .noMargin{
+        margin: 0 !important;
+      }
+
+      .modal-content{
+        overflow: hidden !important;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top sr-only">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="col-sm-offset-1">
+      <div class="row">
+        <div class="col-lg-11 offset-lg-1">
+          <ul class="list-unstyled">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
+            <!-- Button trigger modal -->
+            <div class="btn-group-vertical">
+              <button type="button" class="btn btn-primary pull-left whereWeLandingModal" data-toggle="modal" data-target="#whereWeLandingModal">
+                  <span style="font-size: 3em;">
+                      <i class="fas fa-map-marked-alt"></i>
+                  </span>
+              </button>
+              
+              <button type="button" class="btn btn-primary pull-left leaderBaordModal" data-toggle="modal" data-target="#leaderBaordModal">
+                  <span style="font-size: 3em;">
+                      <i class="fas fa-medal"></i>
+                  </span>
+              </button>
+            </div>
+              
+
+              <!-- Where We Landing Modal -->
+              <div class="modal fade whereWeLandingModal" id="whereWeLandingModal" tabindex="-1" role="dialog" aria-labelledby="whereWeLandingModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content" style="width: 700px">
+                    <div class="modal-header sr-only">
+                      <h5 class="modal-title" id="whereWeLandingModal">Modal title</h5>
+                      
+                    </div>
+                    <div class="modal-body noPadding">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 5px; right: 10px;">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <div class="container heatmap noPadding">
+                            <img class="" src="images/Forts7map.jpg" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer sr-only">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+              <!-- Leadboard Modal -->
+              <div class="modal fade" id="leaderBaordModal" tabindex="-1" role="dialog" aria-labelledby="leaderBaordModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content" style="width: 700px">
+                    <div class="modal-header sr-only">
+                      <h5 class="modal-title" id="leaderBaordModal">Modal title</h5>
+                      
+                    </div>
+                    <div class="modal-body noPadding">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 5px; right: 10px;">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <div class="container noPadding fortniteTrackerDiv">
+                          fortnite tracker data <a href="#" class="leaderBaordModal">click me</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer sr-only">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $( document ).ready(function() {
+        $(".leaderBaordModal").on("click", function(){
+          $(".fortniteTrackerDiv").load('/twitch/fortnite-tracker.php');
+        })
+
+        // create instance
+        var heatmapInstance = h337.create({
+          container: document.querySelector('.heatmap'),
+          radius: 90
+        });
+        document.querySelector('.whereWeLandingModal').onclick = function(ev) {
+          heatmapInstance.addData({
+            x: ev.layerX,
+            y: ev.layerY,
+            value: 1
+          });
+        };
+        // that's it... yay right? ;)
+      });
+    </script>
+
+  </body>
+
+</html>

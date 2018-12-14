@@ -1,0 +1,150 @@
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+<style>
+	body{
+		background-color: #000;
+	}
+	.moving{
+		position: absolute;
+		top: 0;
+		
+		background-color: #2D2D2D;
+		
+		height: 280px;
+		width: 100%;
+
+		padding-left: 125px;
+	}
+	
+	
+	video{
+		margin-top: -40px;
+		margin-left: -30px;
+	}
+	
+	
+	.container{
+		height: 125px;
+		position: relative;
+		
+		
+		top: 400px;
+		left: 60px;
+	}
+	
+	img{
+		margin-top: 10px;
+	}
+	.text{
+		font-size: 65pt;
+		position: absolute;
+		top: 40px;
+		left: 580px;
+		width: 1200px;
+		color: #ccc;
+		display: none;
+		font-family: 'Arial';
+		text-align: center;    
+		line-height: 80px;
+	}
+	
+	.text strong{
+		font-family: 'Arial Black';
+		font-size: 40px;
+	}
+
+</style>
+
+
+
+<div class="container">
+	<div class="moving">
+		<!--
+		<video id="video" width="320" height="185" controls="false" autoplay="true" loop="true">
+			<source src="discord.mp4" type="video/mp4">
+
+			<source src="discord.ogv" type="video/ogv">
+
+			Your browser does not support the video tag.
+		</video>
+		-->
+
+		<img src="twitch-prime-logo.png" width="400" style="padding-top: 20px"/>
+		
+		<div class="text">Don't forget to use that <strong style="font-size: 75pt">FREE</strong> Monthly <strong style="font-size: 75pt">PRIME</strong> Sub!</div>
+	   
+	</div>
+</div>
+
+
+
+
+
+
+
+<script>
+	$( document ).ready(function() {
+		var video = document.getElementById("video");
+		//video.removeAttribute("controls");
+
+
+		
+
+		function animatethis(targetElement, speed) {
+			$(targetElement).delay("90000").animate({ marginTop: "-=350px"},
+			{
+				duration: speed,
+				complete: function ()
+				{
+					
+					
+					setTimeout(function(){
+						//$('#video')[0].play();
+					},0);
+					
+					
+					setTimeout(function(){
+						$(".text").fadeIn();
+					},1500);
+					
+					
+					setTimeout(function(){
+						//$('#video')[0].pause();
+					},6000);
+					
+					
+					setTimeout(function(){
+						$(".text").fadeOut();
+					},11000);
+
+					
+					targetElement.delay("10000").animate({ marginTop: "+=350px" },
+					{
+						duration: speed,
+						complete: function ()
+						{
+							
+							//video.currentTime = 0;
+							$(".text").hide();
+							animatethis(targetElement, speed);
+						}
+					});
+				}
+			});
+		};
+		
+		$(".text").hide();
+		animatethis($('.moving'), 1000);
+		//$('#video')[0].pause();
+		setTimeout(function(){
+			//$('#video')[0].play();
+		},8000);
+	});
+</script>
