@@ -47,6 +47,13 @@
       .modal-content{
         overflow: hidden !important;
       }
+      
+      .heatmap{
+        -moz-user-select: none; 
+        -webkit-user-select: none; 
+        -ms-user-select:none; 
+        user-select:none;-o-user-select:none;
+      }
     </style>
   </head>
 
@@ -169,7 +176,6 @@
 
 
         $(".whereWeLandingModal .heatmap").on("click", function(){
-          console.log("LAND HERE !");
         })
         
 
@@ -194,13 +200,24 @@
               y: Math.floor(Math.random()*height),
               value: val
             };
-            points.push(point);
+            //points.push(point);
           }
           // heatmap data format
           var data = { 
             max: max, 
             data: points 
           };
+
+          document.querySelector('.whereWeLandingModal .heatmap').onclick = function(ev) {
+            console.log("LAND HERE !");
+            
+            heatmapInstance.addData({
+              x: ev.layerX,
+              y: ev.layerY,
+              value: 10
+            });
+          };
+
           // if you have a set of datapoints always use setData instead of addData
           // for data initialization
           heatmapInstance.setData(data);
@@ -223,6 +240,7 @@
           });
         };
         */
+        
 
         // Simple Config
         /*
