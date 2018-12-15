@@ -199,7 +199,7 @@
                             <div class="mainLogo">
                                 <div class="fortnite-data-total-games">Total Games: <span></span></div>
 
-                                <img src="logo.png" height="100"/>
+                                <img src="/twitch-extension/fortnite-tracker/logo.png" height="100"/>
                             </div>
                         </div>
                     </div>
@@ -243,7 +243,7 @@
 
                             <div class="fortnite-data-total-games">Total Games: <span></span></div>
                             <div class="mainLogo moving">
-                                <img src="logo.png" height="80"/>
+                                <img src="/twitch-extension/fortnite-tracker/logo.png" height="80"/>
                             </div>
                         </div>
                     </div>
