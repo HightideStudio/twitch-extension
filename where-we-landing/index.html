@@ -77,6 +77,16 @@
         height: max-content;
       }
 
+      .modal.leader-board-modal .modal-content{
+        background-color: #333;
+        color: #fff;
+        height: 500px;
+      }
+
+
+
+
+
       .btn-control-group button,
       .btn-control-group button:active,
       .btn-control-group button:focus{
@@ -157,12 +167,13 @@
                       <i class="fas fa-map-marked-alt"></i>
                   </span>
               </button>
-              
+              <!--
               <button type="button" class="btn btn-primary pull-left leader-board-modal" data-toggle="modal" data-target="#leader-board-modal">
                   <span style="font-size: 3em;">
                       <i class="fas fa-medal"></i>
                   </span>
               </button>
+              -->
             </div>
               
 
@@ -197,7 +208,7 @@
               
 
               <!-- Leadboard Modal -->
-              <div class="modal fade" id="leader-board-modal" tabindex="-1" role="dialog" aria-labelledby="leader-board-modal" aria-hidden="true">
+              <div class="modal fade leader-board-modal" id="leader-board-modal" tabindex="-1" role="dialog" aria-labelledby="leader-board-modal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header sr-only">
@@ -228,7 +239,7 @@
     <script>
       $( document ).ready(function() {
         $(".leader-board-modal").on("click", function(){
-          $(".fortniteTrackerDiv").load('/twitch-extension/fortnite-tracker/fortnite-tracker.php');
+          //$(".fortniteTrackerDiv").load('/twitch-extension/fortnite-tracker/fortnite-tracker.php');
         })
 
 
