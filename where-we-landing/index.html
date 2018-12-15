@@ -21,6 +21,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     
+    <script type="text/javascript" src="https://cdn.rawgit.com/pa7/heatmap.js/master/build/heatmap.min.js"></script>
     
     <!-- Hotjar Tracking Code for www.hightidestudio.com -->
     <script>
@@ -108,7 +109,7 @@
               <!-- Where We Landing Modal -->
               <div class="modal fade whereWeLandingModal" id="whereWeLandingModal" tabindex="-1" role="dialog" aria-labelledby="whereWeLandingModal" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                  <div class="modal-content" style="width: 700px">
+                  <div class="modal-content">
                     <div class="modal-header sr-only">
                       <h5 class="modal-title" id="whereWeLandingModal">Modal title</h5>
                       
@@ -172,7 +173,42 @@
         })
 
 
+        var heatmapInstance = h337.create({
+          // only container is required, the rest will be defaults
+          container: document.querySelector('.whereWeLandingModal .heatmap')
+        });
+
+        // now generate some random data
+        var points = [];
+        var max = 0;
+        var width = 840;
+        var height = 400;
+        var len = 200;
+
+        while (len--) {
+          var val = Math.floor(Math.random()*100);
+          max = Math.max(max, val);
+          var point = {
+            x: Math.floor(Math.random()*width),
+            y: Math.floor(Math.random()*height),
+            value: val
+          };
+          points.push(point);
+        }
+        // heatmap data format
+        var data = { 
+          max: max, 
+          data: points 
+        };
+        // if you have a set of datapoints always use setData instead of addData
+        // for data initialization
+        heatmapInstance.setData(data);
+
+
+
+
         //On Click Heat Map JS
+        /*
         var heatmapInstance = h337.create({
           container: document.querySelector('.heatmap'),
           radius: 90
@@ -184,6 +220,7 @@
             value: 1
           });
         };
+        */
 
         // Simple Config
         /*
