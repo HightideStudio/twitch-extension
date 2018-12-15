@@ -140,9 +140,12 @@
                             <img class="" src="images/Forts7map.jpg" style="width: 100%;"/>
                         </div>
                     </div>
-                    <div class="modal-footer sr-only">
+                    <div class="modal-footer" style="border: none; position: absolute; bottom: 0; right: 0;">
+                      <button type="button" class="btn btn-secondary clear-heat-map">Clear</button>
+                      <!--
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       <button type="button" class="btn btn-primary">Save changes</button>
+                      -->
                     </div>
                   </div>
                 </div>
@@ -231,7 +234,14 @@
           // if you have a set of datapoints always use setData instead of addData
           // for data initialization
           heatmapInstance.setData(data);
+
+          //clear heat map
+          $(".clear-heat-map").on("click", function(){
+            heatmapInstance.setData(data);
+          })
         });
+
+
 
 
 
