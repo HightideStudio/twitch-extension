@@ -220,7 +220,7 @@
 
           while (len--) {
             //var val = Math.floor(Math.random()*100);
-            var val = 25;
+            var val = .1;
             max = Math.max(max, val);
             var point = {
               x: Math.floor(Math.random()*width),
@@ -236,7 +236,7 @@
             heatmapInstance.addData({
               x: ev.layerX,
               y: ev.layerY,
-              value: 75
+              value: .1
             });
           };
 
@@ -257,7 +257,7 @@
             var dataPoint = { 
               x: Math.floor(Math.random()*798), // x coordinate of the datapoint, a number 
               y: Math.floor(Math.random()*798), // y coordinate of the datapoint, a number
-              value: 25 // the value at datapoint(x, y)
+              value: .1 // the value at datapoint(x, y)
             };
 
             // multiple datapoints (for data initialization use setData!!)
