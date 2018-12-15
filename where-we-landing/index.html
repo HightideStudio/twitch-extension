@@ -37,10 +37,10 @@
     
     
     <style>
-      .noPadding{
+      .no-padding{
         padding: 0 !important;
       }
-      .noMargin{
+      .no-margin{
         margin: 0 !important;
       }
 
@@ -53,6 +53,13 @@
         -webkit-user-select: none; 
         -ms-user-select:none; 
         user-select:none;-o-user-select:none;
+      }
+
+      .where-we-landing-modal{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: max-content;
       }
     </style>
   </head>
@@ -88,7 +95,7 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="col-sm-offset-1">
+    <div class="col-sm-offset-1" style="width: 60%">
       <div class="row">
         <div class="col-lg-11 offset-lg-1">
           <ul class="list-unstyled">
@@ -99,7 +106,7 @@
 
             <!-- Button trigger modal -->
             <div class="btn-group-vertical">
-              <button type="button" class="btn btn-primary pull-left whereWeLandingModal" data-toggle="modal" data-target="#whereWeLandingModal">
+              <button type="button" class="btn btn-primary pull-left where-we-landing-modal" data-toggle="modal" data-target="#where-we-landing-modal">
                   <span style="font-size: 3em;">
                       <i class="fas fa-map-marked-alt"></i>
                   </span>
@@ -114,19 +121,19 @@
               
 
               <!-- Where We Landing Modal -->
-              <div class="modal fade whereWeLandingModal" id="whereWeLandingModal" tabindex="-1" role="dialog" aria-labelledby="whereWeLandingModal" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+              <div class="modal fade where-we-landing-modal" id="where-we-landing-modal" tabindex="-1" role="dialog" aria-labelledby="where-we-landing-modal" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header sr-only">
-                      <h5 class="modal-title" id="whereWeLandingModal">Modal title</h5>
+                      <h5 class="modal-title" id="where-we-landing-modal">Modal title</h5>
                       
                     </div>
-                    <div class="modal-body noPadding">
+                    <div class="modal-body no-padding">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 5px; right: 10px;">
                           <span aria-hidden="true">&times;</span>
                         </button>
 
-                        <div class="container heatmap noPadding">
+                        <div class="container heatmap no-padding">
                             <img class="" src="images/Forts7map.jpg" style="width: 100%;"/>
                         </div>
                     </div>
@@ -175,14 +182,14 @@
         })
 
 
-        $(".whereWeLandingModal .heatmap").on("click", function(){
+        $(".where-we-landing-modal .heatmap").on("click", function(){
         })
         
 
-        $( ".whereWeLandingModal" ).on('shown.bs.modal', function (e) {
+        $( ".where-we-landing-modal" ).on('shown.bs.modal', function (e) {
           var heatmapInstance = h337.create({
             // only container is required, the rest will be defaults
-            container: document.querySelector('.whereWeLandingModal .heatmap')
+            container: document.querySelector('.where-we-landing-modal .heatmap')
           });
 
           // now generate some random data
@@ -208,7 +215,7 @@
             data: points 
           };
 
-          document.querySelector('.whereWeLandingModal .heatmap').onclick = function(ev) {
+          document.querySelector('.where-we-landing-modal .heatmap').onclick = function(ev) {
             console.log("LAND HERE !");
             
             heatmapInstance.addData({
@@ -232,7 +239,7 @@
           container: document.querySelector('.heatmap'),
           radius: 90
         });
-        document.querySelector('.whereWeLandingModal').onclick = function(ev) {
+        document.querySelector('.where-we-landing-modal').onclick = function(ev) {
           heatmapInstance.addData({
             x: ev.layerX,
             y: ev.layerY,
