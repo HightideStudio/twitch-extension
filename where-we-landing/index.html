@@ -37,6 +37,14 @@
     
     
     <style>
+      @font-face {
+        font-family: "Fortnite";
+        src: url("font/BurbankBigCondensed-Bold.otf");
+      }
+      .fortnite-font{
+        font-family: 'Fortnite', Arial, sans-serif;
+      }
+
       .no-padding{
         padding: 0 !important;
       }
@@ -56,6 +64,13 @@
         user-select:none !important;
         -o-user-select:none !important;
         outline: none !important;
+      }
+      .fortnite-font.title{
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        color: #fff;
+        font-size: 4em;
       }
 
       .clear-heat-map,
@@ -193,6 +208,7 @@
                         </button>
 
                         <div class="container heatmap no-padding">
+                            <h1 class="fortnite-font title">Fortnite</h1>
                             <img class="" src="images/Forts7map.jpg" style="width: 100%;"/>
                         </div>
                     </div>
